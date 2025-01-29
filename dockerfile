@@ -6,7 +6,7 @@ COPY ./pom.xml .
 RUN mvn package -DskipTests
 
 # Stage 2: Create the final image
-FROM openjdk:11-jdk-alpine
+FROM eclipse-temurin:11-jdk-alpine
 ARG JAR_FILE=/app/target/app.jar
 COPY --from=builder ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
