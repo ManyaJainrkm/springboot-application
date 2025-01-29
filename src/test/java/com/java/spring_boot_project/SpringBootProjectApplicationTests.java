@@ -8,4 +8,7 @@ class SpringBootProjectApplicationTests {
     @Test
     void contextLoads() {
     }
+    static {
+    System.setProperty("org.mockito.inline-javaagent", "true");
+}
 }
