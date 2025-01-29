@@ -1,5 +1,5 @@
 # Stage 1: Build with Maven
-FROM maven:3.9.9-openjdk-11 AS builder
+FROM maven:3.9.9-openjdk-17 AS builder
 WORKDIR /app
 COPY ./src ./src
 COPY ./pom.xml .
