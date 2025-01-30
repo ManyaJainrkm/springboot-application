@@ -12,7 +12,7 @@ COPY src /app/src
 RUN mvn clean package -DskipTests
 
 # Stage 2: Create the final image
-FROM openjdk:17-jdk-alpine
+FROM eclipse-temurin:17-jdk-alpine
 
 WORKDIR /app
 
