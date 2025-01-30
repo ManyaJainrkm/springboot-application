@@ -1,5 +1,5 @@
 # Stage 1: Build with Maven
-FROM manyajainrkm/spring-boot-project:latest
+FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ COPY src /app/src
 RUN mvn clean package -DskipTests
 
 # Stage 2: Create the final image
-FROM manyajainrkm/spring-boot-project:latest
+FROM FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
