@@ -1,5 +1,5 @@
 # Stage 1: Build with Maven
-FROM openjdk:17-jdk-slim
+FROM maven:3.9.9-openjdk-17 AS builder
 
 WORKDIR /app
 
@@ -23,4 +23,3 @@ EXPOSE 8080
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
-
